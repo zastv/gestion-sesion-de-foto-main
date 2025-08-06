@@ -12,8 +12,13 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// CORS configuration to allow frontend requests
-app.use(cors({ origin: 'http://localhost:5173' }));
+// CORS configuration to allow frontend requests from localhost and Codespaces
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://redesigned-goldfish-px6rjgg69jvh66qx-5173.app.github.dev'
+  ]
+}));
 
 // PostgreSQL connection
 const pool = new Pool({
