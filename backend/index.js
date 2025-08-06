@@ -59,7 +59,6 @@ const upload = multer({
   }
 });
 
-app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
