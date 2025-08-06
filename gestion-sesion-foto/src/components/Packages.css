@@ -1,0 +1,60 @@
+.packages-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+.packages-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.packages-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.package-card {
+  background: #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.package-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0.5rem 0;
+}
+.package-desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.package-select {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.package-select:hover {
+  background: #1d4ed8;
+} 

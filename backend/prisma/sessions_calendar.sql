@@ -1,0 +1,21 @@
+CREATE TABLE "Session" (
+  id SERIAL PRIMARY KEY,
+  userId INTEGER REFERENCES "User"(id) ON DELETE SET NULL,
+  title TEXT NOT NULL,
+  description TEXT,
+  date TIMESTAMPTZ NOT NULL,
+  duration_minutes INTEGER NOT NULL,
+  location TEXT,
+  status TEXT NOT NULL DEFAULT 'pendiente',
+  createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE "CalendarEvent" (
+  id SERIAL PRIMARY KEY,
+  sessionId INTEGER REFERENCES "Session"(id) ON DELETE CASCADE,
+  start TIMESTAMPTZ NOT NULL,
+  "end" TIMESTAMPTZ NOT NULL,
+  title TEXT NOT NULL,
+  color TEXT,
+  createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

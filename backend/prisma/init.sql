@@ -1,0 +1,9 @@
+CREATE TABLE "User" (
+  id SERIAL PRIMARY KEY,
+  email TEXT UNIQUE NOT NULL,
+  password TEXT NOT NULL,
+  name TEXT NOT NULL,
+  phone TEXT,
+  provider TEXT NOT NULL DEFAULT 'local',
+  createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
